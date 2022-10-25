@@ -32,7 +32,9 @@ const Card = (props) => {
 
   // function to delete the element from the list
   const deleteItem = (index) => {
+    console.log(index);
     let newCardItemList = props.cardItem.filter((element, i) => {
+      // console.log(element, i);
       if (i !== index) {
         return element;
       }
@@ -47,7 +49,6 @@ const Card = (props) => {
       <div
         className="w-60 h-72 p-2 flex flex-col gap-1 rounded-lg"
         style={{ backgroundColor: color }}
-        key={props.index}
       >
         <textarea
           rows={1}
@@ -71,7 +72,7 @@ const Card = (props) => {
               deleteItem(props.index);
             }}
           >
-            <i class="fa-solid fa-trash"></i>
+            <i className="fa-solid fa-trash"></i>
           </span>
         </p>
       </div>

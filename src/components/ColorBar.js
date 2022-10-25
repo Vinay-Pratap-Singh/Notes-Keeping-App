@@ -19,6 +19,7 @@ const ColorBar = (props) => {
     let newItem = {
       title: "",
       notes: "",
+      id:Date.now(),
       newDate,
       color,
     };
@@ -90,12 +91,6 @@ const ColorBar = (props) => {
             className="bg-[#fff] h-6 w-6 rounded-[50%] cursor-pointer"
             onClick={() => item("#fff")}
           ></li>
-
-          {/* {
-            colors.map((element) => {
-              <ColorCard color={element} createCard={ props.createCard} setCardItem={props.setCardItem}/>
-            })
-          } */}
         </ul>
       </div>
     </>

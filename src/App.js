@@ -35,6 +35,7 @@ function App() {
               <Card
                 item={element}
                 index={index}
+                key={element.id}
                 setCardItem={setCardItem}
                 cardItem={cardItem}
               />
